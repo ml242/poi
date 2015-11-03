@@ -1,0 +1,71 @@
+@font-face
+{
+    font-family: Futura;
+    src: url('../fonts/Futura.ttc');
+}
+@font-face
+{
+    font-family: Duke;
+    src: url('../fonts/Duke.otf');
+}
+
+/* Extra Small devices (767px and below) */
+@media (max-width: 767px) {
+    .jumbotron h1 {
+        font-size: 3em;
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .jumbotron h1 {
+        font-size: 6em;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .jumbotron h1 {
+        font-size: 8em;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .jumbotron h1 {
+        font-size: 10em;
+    }
+}
+h1
+{
+    font-family: 'Duke';
+}
+.jumbotron
+{
+    background: white;
+    padding: 2rem 1rem 0rem 1rem;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.subtitle
+{
+    font-family: Futura;
+    font-weight: 700;
+    margin-top: -0.6em;
+    margin-bottom: 0;
+}
+.sub-menu
+{
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 1rem 0;
+    border-top: 1px solid black;
+}
+.abs-hero
+{
+    position: absolute;
+    width: 100%;
+    background-image: url('../images/poi-mural-mobile.jpg');
+    background-size: cover;
+    background-position-y: 10rem;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
