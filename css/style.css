@@ -101,12 +101,46 @@ a i {
     padding: 2.5rem 0 1.5rem 0rem;
 }
 
-h4 .nav-link {
+.nav-item a {
+    color: #373a3c;
+}
+
+.nav-item h4:first-child {
+    display: inline-block;
     float: left;
 }
 
-.nav-item a {
+.press-item, .services-item {
+    font-family: Futura;
+    font-weight: 700;
+    padding: 1.5rem 0 .5rem 0rem;
+}
+
+.press-item a, .services-item a {
     color: #373a3c;
+}
+
+.services-item h5:nth-child(1) {
+    display: inline-block;
+    text-align: left;
+}
+
+.services-item h5:nth-child(2) {
+    float: right;
+}
+
+.hood {
+    display: inline-block;
+}
+
+.caret {
+    float: right;
+    padding-left: 3rem;
+    margin-top: 1rem;
+}
+
+h4 .nav-link {
+    float: left;
 }
 
 .right-sub {
