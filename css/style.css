@@ -35,6 +35,10 @@
         font-size: 10em;
     }
 }
+
+
+/* all styles */
+
 h1
 {
     font-family: 'Duke';
@@ -53,6 +57,7 @@ h1
     margin-top: -0.6em;
     margin-bottom: 0;
 }
+
 .sub-menu
 {
     margin: 1rem 0rem 0rem 0rem;
@@ -68,4 +73,58 @@ h1
     background-position-y: 10rem;
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+a i {
+    color: #373a3c;
+}
+
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#side-menu {
+    height: 100vh;
+}
+
+#side-menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav-item {
+    font-family: Futura;
+    font-weight: 700;
+    padding: 2.5rem 0 1.5rem 0rem;
+}
+
+h4 .nav-link {
+    float: left;
+}
+
+.nav-item a {
+    color: #373a3c;
+}
+
+.right-sub {
+    position: absolute;
+    left: 100vw;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 1rem 0;
+}
+
+.location-tab {
+    text-align: left;
+}
+
+.border {
+    margin: 0 1rem;
+    border-top: 1px solid black;
 }

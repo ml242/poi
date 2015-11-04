@@ -16,24 +16,82 @@
 <div class="abs-hero">
         <div class="jumbotron">
             <h1 class="text-center">PERSONS OF INTEREST</h1>
-            <h4 class="text-center subtitle">BARBERSHOP</h4>
+            <h5 class="text-center subtitle">BARBERSHOP</h5>
 
             <div class="row">
                 <div class="col-xs-12">
                     <div class="text-right sub-menu">
+                        <a href="#" id="collapseController"><i class="fa fa-bars fa-2x"></i></a> &nbsp;
+                        <a href="http://instagram.com/personsofinterestbarbershop/"><i class="fa fa-camera-retro fa-2x"></i></a>
 
-                        <i class="fa fa-bars fa-2x"></i> &nbsp;
-                        <i class="fa fa-camera-retro fa-2x"></i>
+                        <div class="hidden" id="side-menu" style="padding-top:4rem">
+                            <ul>
+                                <li class="nav-item sub-menu">
+                                    <h4 id="locations"><a class="nav-link" href="#">LOCATIONS</a></h4> &nbsp;>
 
+                                        <div class="row">
+                                            <div class="right-sub" style="padding-top: 4rem;">
+
+                                                <ul class="location-tab">
+                                                    <li class="nav-item border">
+                                                        <h5>WILLIAMSBURG</h5>
+                                                        <h6>(718) 218-9100</h6>
+                                                    </li>
+                                                    <li class="nav-item border">
+                                                        <h5>CARROL GARDENS</h5>
+                                                        <h6>(718) 218-9100</h6>
+                                                    </li>
+                                                    <li class="nav-item border">
+                                                        <h5>FORT GREEN</h5>
+                                                        <h6>(718) 875-2800</h6>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                </li>
+                                <li class="nav-item sub-menu">
+                                    <h4 id="services"><a class="nav-link" href="#">SERVICES</a></h4> &nbsp;>
+                                </li>
+                                <li class="nav-item sub-menu">
+                                    <h4 id="press"><a class="nav-link" href="#">PRESS</a></h4> &nbsp;>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
+
+
         </div>
 </div>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+    <script>
+        $('#collapseController').on('click', function(){
+            if ( $("#side-menu").hasClass('hidden') ) {
+                $("#side-menu").animate({opacity: "1"}, {duration: 400, queue: false});
+                $('#side-menu').removeClass('hidden');
+            } else {
+                $("#side-menu").animate({opacity: "0"}, {duration: 400, queue: false});
+                function hide() {
+                    $('#side-menu').addClass('hidden').delay(500);
+                }
+                setTimeout(hide, 375)
+            }
+        })
+
+        $("#locations").on('click', function(){
+            $('#side-menu').css({position: 'absolute'});
+            $('#side-menu').animate({left: "-100vw"}, {duration: 400});
+        })
+
+
+    </script>
 </body>
 </html>
