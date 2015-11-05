@@ -34,15 +34,27 @@
 
                                             <ul class="location-tab">
                                                 <li class="nav-item border">
-                                                    <h5 class="hood">WILLIAMSBURG</h5> <span class="caret"><h5>&nbsp;></h5></span>
+                                                    <h5 class="hood">WILLIAMSBURG</h5> <span class="caret williamsburg"><h5><a>&nbsp;></a></h5></span>
+                                                    <h6><a href="tel:+(718) 218-9100">(718) 218-9100</a></h6>
+
+                                                    <div id="shop-details" class="row hidden">
+                                                        <div class="right-sub" style="padding-top: 4rem;">
+
+                                                            <ul class="williamsburg-tab">
+
+                                                                HI
+
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item border">
+                                                    <h5 class="hood">CARROL GARDENS</h5><span class="caret carrol"><h5><a>&nbsp;></a></h5></span>
                                                     <h6><a href="tel:+(718) 218-9100">(718) 218-9100</a></h6>
                                                 </li>
                                                 <li class="nav-item border">
-                                                    <h5 class="hood">CARROL GARDENS</h5><span class="caret"><h5>&nbsp;></h5></span>
-                                                    <h6><a href="tel:+(718) 218-9100">(718) 218-9100</a></h6>
-                                                </li>
-                                                <li class="nav-item border">
-                                                    <h5 class="hood">FORT GREEN</h5><span class="caret"><h5>&nbsp;></h5></span>
+                                                    <h5 class="hood">FORT GREEN</h5><span class="caret fort"><h5><a>&nbsp;></a></h5></span>
                                                     <h6><a href="tel:+(718) 875-2800">(718) 875-2800</a></h6>
                                                 </li>
                                             </ul>
@@ -188,6 +200,8 @@
             }
         })
 
+        // 1 deep menus
+
         $("#locations").on('click', function(){
             $('.abs-hero').css({'background-image': 'none'})
             $('.abs-hero').css({'background-color': 'white'})
@@ -217,6 +231,27 @@
             $("#press-menu").removeClass('hidden')
             $("#press-menu").animate({opacity: "1"}, {duration: 300, queue: false});
         })
+
+
+        // 2 deep menus
+
+        $(".location-tab .caret.williamsburg").on('click', function(){
+            alert('hi')
+//            $('.abs-hero').css({'background-image': 'none'})
+//            $('.abs-hero').css({'background-color': 'white'})
+//            $('#side-menu').css({position: 'absolute'});
+//            $('#side-menu').animate({left: "-100vw"}, {duration: 300});
+//            $("#locations-menu").removeClass('hidden')
+//            $("#locations-menu").animate({opacity: "1"}, {duration: 300, queue: false});
+        });
+
+        $(".location-tab .caret.carrol").on('click', function() {
+            alert('hi')
+        });
+
+        $(".location-tab .caret.fort").on('click', function() {
+            alert('hi')
+        });
 
     </script>
 </body>
