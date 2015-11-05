@@ -27,7 +27,7 @@
                         <div class="hidden" id="side-menu" style="padding-top:4rem">
                             <ul>
                                 <li class="nav-item sub-menu">
-                                    <h4 id="locations"><a class="nav-link" href="#">LOCATIONS</a></h4> <h4>&nbsp;></h4>
+                                    <h4><a class="nav-link" href="#">LOCATIONS</a></h4> <h4 id="locations"><a href="#">&nbsp;></a></h4>
 
                                     <div id="locations-menu" class="row hidden">
                                         <div class="right-sub" style="padding-top: 4rem;">
@@ -63,7 +63,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item sub-menu">
-                                    <h4 id="services"><a class="nav-link" href="#">SERVICES</a></h4> <h4>&nbsp;></h4>
+                                    <h4><a class="nav-link" href="#">SERVICES</a></h4> <h4 id="services"><a href="#">&nbsp;></a></h4>
 
                                     <div id="services-menu" class="row hidden">
                                         <div class="right-sub" style="padding-top: 4rem;">
@@ -94,7 +94,7 @@
 
                                 </li>
                                 <li class="nav-item sub-menu">
-                                    <h4 id="press"><a class="nav-link" href="#">PRESS</a></h4> <h4>&nbsp;></h4>
+                                    <h4><a class="nav-link" href="#">PRESS</a></h4> <h4 id="press"><a href="#">&nbsp;></a></h4>
 
                                     <div id="press-menu" class="row hidden">
                                         <div class="right-sub" style="padding-top: 4rem;">
@@ -179,12 +179,18 @@
                     $('#side-menu').addClass('hidden');
                 }
 
-                $('.abs-hero').css({'background-image': "url('../images/poi-mural-mobile.jpg')" })
+                if ( (!$('#locations-menu').hasClass('hidden'))
+                        || (!$('#press-menu').hasClass('hidden'))
+                            || (!$('#services-menu').hasClass('hidden'))){
+                    $('#side-menu').css({'width': '100vw'})
+                    $('#side-menu').css({'padding': '0 1rem'})
+                }
+
+                $('.abs-hero').css({'background-image': "url('./images/poi-mural-mobile.jpg')" })
                 $('.abs-hero').css({'background-color': 'none'})
 
-                $('#side-menu').css({'width': '100vw'})
                 $('#side-menu').css({'left': '0vw'})
-                $('#side-menu').css({'padding': "4rem 1rem"})
+                $('#side-menu').css({'padding-top': "4rem"})
 
                 setTimeout(hide, 405)
                 $("#side-menu").animate({opacity: "0"}, {duration: 400, queue: false});

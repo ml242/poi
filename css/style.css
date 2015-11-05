@@ -129,6 +129,11 @@ a i {
     float: right;
 }
 
+.nav-item h4 a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .hood {
     display: inline-block;
 }
