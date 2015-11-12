@@ -264,22 +264,44 @@
     .dropdown-item .col-md-4 h5 span {
         float: right;
     }
-    .press-dropdown {
+    .press-dropdown, .location-dropdown  {
         text-transform: uppercase;
         font-family: Futura;
         font-weight: 700;
         background-color: white !important;
         width: 33%;
         padding-right: 2rem;
-        max-height: 65vh;
+        height: 65vh;
         overflow-y: scroll;
     }
-    .press-dropdown h6 {
+    .location-dropdown {
+        width: 30% !important;
+    }
+    .press-dropdown h6{
         border-bottom: black 1px solid;
         padding: 1rem 0;
     }
-    .press-dropdown h6 a, .press-dropdown h6 a:visited {
+    .location-dropdown h5 {
+        border-bottom: black 1px solid;
+        padding: 3rem 0;
+    }
+    .location-dropdown h5:last-child {
+        border-bottom: none;
+    }
+    .press-dropdown h6 a, .press-dropdown h6 a:visited, .location-dropdown h5 a,  .location--dropdown h5 a:visited {
         color: inherit;
+    }
+    .location-map {
+        padding-left: 0;
+        width: 70%;
+        background-color: white;
+        text-align: right;
+    }
+    .location-map img {
+        height: 65vh;
+        left: 0;
+        right: 0;
+
     }
 }
 
