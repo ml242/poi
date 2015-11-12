@@ -265,6 +265,23 @@
     .dropdown-item .col-md-4 h5 span {
         float: right;
     }
+    .press-dropdown {
+        text-transform: uppercase;
+        font-family: Futura;
+        font-weight: 700;
+        background-color: white !important;
+        width: 33%;
+        padding-right: 2rem;
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+    .press-dropdown h6 {
+        border-bottom: black 1px solid;
+        padding: 1rem 0;
+    }
+    .press-dropdown h6 a, .press-dropdown h6 a:visited {
+        color: inherit;
+    }
 }
 
 
