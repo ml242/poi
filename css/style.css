@@ -209,7 +209,6 @@
     .nav li.dropdown.open .dropdown-menu {
         border-radius: 0;
         border: 0;
-        /*display: table;*/
         width: 100%;
         text-align: left;
         left:0;
@@ -272,7 +271,7 @@
         background-color: white !important;
         width: 33%;
         padding-right: 2rem;
-        max-height: 60vh;
+        max-height: 65vh;
         overflow-y: scroll;
     }
     .press-dropdown h6 {
