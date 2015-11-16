@@ -308,24 +308,19 @@ src: url('../fonts/Duke.otf');
     .press-dropdown h6 a, .press-dropdown h6 a:visited, .location-dropdown h5 a,  .location--dropdown h5 a:visited {
         color: inherit;
     }
-    /*.location-map {*/
-        /*padding-left: 0;*/
-        /*width: 70%;*/
-        /*height: 1000px;*/
-        /*background-color: white;*/
-        /*text-align: center;*/
-    /*}*/
     #map {
         height: 67vh;
         width: 100%;
     }
-
+    .leaflet-container {
+        background: white;
+    }
 }
 
 
 /* all styles */
 
-/* title sectrion*/
+/* title section*/
 h1
 {
     font-family: 'Duke';
@@ -369,4 +364,3 @@ a i {
 body {
     font-family: Futura;
 }
-

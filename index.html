@@ -17,9 +17,11 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-    <script src="./js/leaflet-prov.js"></script>
+    <!--<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+    <!--<script src="./js/leaflet-prov.js"></script>-->
 
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
 
 </head>
 
@@ -277,9 +279,13 @@
                     <div class="dropdown-menu" style="background-color: transparent">
                         <div class="row" style="background-color: white;">
                             <ul class="dropdown-item col-md-4 location-dropdown">
-                                <li style="text-decoration: none; margin-left: .5rem;"><h6>Williamsburg <span class="pull-right"> > </span></h6></li>
-                                <li style="text-decoration: none;"><h6>Carroll Gardens <span class="pull-right"> > </span></h6></li>
-                                <li style="text-decoration: none; margin-right: 0"><h6>Fort Green <span class="pull-right"> > </span></h6></li>
+                                <li id="poi-burg" style="text-decoration: none; margin-left: .5rem;"><h6>Williamsburg <span class="pull-right"> > </span></h6>
+                                    <div class="row hidden">
+                                        HELLO
+                                    </div>
+                                </li>
+                                <li id="poi-gard" style="text-decoration: none;"><h6>Carroll Gardens <span class="pull-right"> > </span></h6></li>
+                                <li id="poi-green" style="text-decoration: none; margin-right: 0"><h6>Fort Green <span class="pull-right"> > </span></h6></li>
                             </ul>
                             <div class="col-md-8">
                                 <!--<img src="./images/full-map.jpg">-->
@@ -514,31 +520,47 @@
 
     </script>
 
+    <!--<script>-->
+
+        <!--var map = L.map('map').setView([40.698600472532895, -73.97652626037598], 13);-->
+
+        <!--L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {-->
+            <!--attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'-->
+        <!--}).addTo(map);-->
+
+<!--//        L.tileLayer.provider('Thunderforest.Landscape').addTo(map);-->
+
+        <!--var marker1 = L.marker([40.68176, -73.99364]).addTo(map);-->
+        <!--var marker2 = L.marker([40.68682, -73.97471]).addTo(map);-->
+        <!--var marker3 = L.marker([40.71378, -73.95635]).addTo(map);-->
+
+
+        <!--marker3.bindPopup("<b>POI Williamsburg</b><br>88 Havemeyer St, Brooklyn, NY 11211");-->
+        <!--marker2.bindPopup("<b>POI Fort Green</b><br>88 S Portland Ave, Brooklyn, NY 11217");-->
+        <!--marker1.bindPopup("<b>POI Carroll Gardens</b><br>299 Smith St, Brooklyn, NY 11231");-->
+
+    <!--</script>-->
+
     <script>
 
-        var map = L.map('map').setView([40.698600472532895, -73.97652626037598], 13);
+        L.mapbox.accessToken = 'pk.eyJ1IjoibWwyNDIiLCJhIjoiY2loMTE4MWZmMHg1bDY1bTB0cGV1NXpnNyJ9.A-CpujvAyIW19Mo1RPHGpA';
+        // Replace 'mapbox.streets' with your map id.
+        var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/ml242.cih11807t0wsk4mm3duafrdmd/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+            attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+        });
 
+        var map = L.mapbox.map('map', 'ml242.cih11807t0wsk4mm3duafrdmd').setView([40.698600472532895, -73.97652626037598], 13);
 
-
-        L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-//        L.tileLayer.provider('Thunderforest.Landscape').addTo(map);
-
-
-        var marker1 = L.marker([40.68176, -73.99364]).addTo(map);
+                var marker1 = L.marker([40.68176, -73.99364]).addTo(map);
         var marker2 = L.marker([40.68682, -73.97471]).addTo(map);
         var marker3 = L.marker([40.71378, -73.95635]).addTo(map);
-
 
         marker3.bindPopup("<b>POI Williamsburg</b><br>88 Havemeyer St, Brooklyn, NY 11211");
         marker2.bindPopup("<b>POI Fort Green</b><br>88 S Portland Ave, Brooklyn, NY 11217");
         marker1.bindPopup("<b>POI Carroll Gardens</b><br>299 Smith St, Brooklyn, NY 11231");
 
-
-
     </script>
+
     <script>
         $('#map').on('click', function(e){
             e.stopPropagation();
@@ -551,5 +573,11 @@
         }
     </script>
 
+    <script>
+        $('#poi-burg').on('click', function(e){
+            e.stopPropagation();
+            $(this).children().removeClass('hidden');
+        })
+    </script>
 </body>
 </html>
