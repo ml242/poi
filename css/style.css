@@ -236,24 +236,19 @@
         transform: rotate(90deg);
     }
     .background-tablet {
-        background-image: url("../images/poi-mural-full.jpg");
+        background: url("../images/poi-mural-full.jpg") 0 0 / cover;
         height: calc(100vh - 270px);
+        -webkit-height: calc(100vh - 270px);
         overflow-y: hidden;
-        background-size: cover;
     }
     .nav li.dropdown {
         position: static;
     }
-    /*.nav li.dropdown.open {*/
-    /*position: static;*/
-    /*}*/
     .nav li.dropdown.open .dropdown-menu {
         border-radius: 0;
         border: 0;
         width: 100%;
         text-align: left;
-        /*left:0;*/
-        /*right:0;*/
     }
     .dropdown-manu {
         padding: 1em 0;
