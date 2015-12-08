@@ -327,7 +327,7 @@
         padding: 3rem 0;
         line-height: 1.25
     }
-    .location-dropdown li:last-child, {
+    .location-dropdown li:last-child {
         border-bottom: none;
     }
     #allview > li {
