@@ -232,11 +232,6 @@
         padding-right: 2rem;
         display: inline-block;
     }
-    .poi-nav-item.open > a span{
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
     .background-tablet {
         background: url("../images/poi-mural-full.jpg") 0 0 / cover;
         height: calc(100vh - 270px);
@@ -423,4 +418,10 @@ p {
 }
 #footer li {
     list-style-type: none;
+}
+
+.back-will, .back-gard, .back-burg {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5rem;
 }
