@@ -68,7 +68,7 @@
         transition: opacity 0.5s;
     }
     #side-menu, .shop-menu, #locations-menu {
-        height: 100vh;
+        height: calc(100vh - 150px);
         margin-top: 1rem;
     }
 
@@ -241,7 +241,7 @@
     .mapped-panel {
         height: calc(100vh - 220px);
         -webkit-height: calc(100vh - 220px);
-        overflow: hidden;
+        background-color: white;
     }
     .nav li.dropdown {
         position: static;
