@@ -251,8 +251,8 @@
         position: relative;
         margin-top: 16%;
         margin-left: 15%;
-        animation: sailBoat 20s 0s forwards,
-                   swing 0 1s forwards;
+        animation: sailBoat 25s 2s forwards,
+                   swing 0 2s forwards;
 
     }
     @keyframes sailBoat {
@@ -353,7 +353,7 @@
         font-family: FuturaBT-Medium;
         font-weight: 700;
         background-color: white !important;
-        height: 60vh;
+        height: calc(96vh - 220px);
         cursor: pointer;
     }
     .location-map {
