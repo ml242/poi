@@ -169,13 +169,22 @@
 }
 
 @media (max-width: 1000px) {
-    .services-list .dropdown-item .col-md-4 h6, .location-dropdown li h6 {
+    .services-list .dropdown-item .col-md-4 h6, .location-dropdown li h6, .location-dropdown li h6 a span {
         font-size: 1.1vw;
     }
 }
 @media (max-width: 1050px) {
-    .location-dropdown li h6  {
+    .location-dropdown li h6, .location-dropdown li h6 a  {
         font-size: 1.1vw;
+    }
+}
+
+@media (max-height: 700px) {
+    .location-dropdown {
+        overflow: scroll;
+    }
+    .location-dropdown li:last-child {
+        margin-bottom: 1rem;
     }
 }
 /* (tablets, 768px and up) */
